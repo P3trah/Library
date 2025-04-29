@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Petrah Library</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
    
     <div id="library-container">
-        <h1>Petrah's Library</h1>
+        <h1>Petrah's  Library</h1>
+        <h2>Track Your Reading Journey!</h2>
+        
+        <!-- Form for adding new books -->
         <form id="new-book-form">
+
             <div>
                 <label for="title">Title:</label>
                 <input type="text" id="title" required>
@@ -25,10 +28,16 @@
                 <input type="number" id="pages" required>
             </div>
             <label>
-               <input type="checkbox" id="read"> Read
-           </label>
-           <button type="submit">Add Book</button>
+                <input type="checkbox" id="read"> Read
+            </label>
+            <button type="submit">Add Book</button>
         </form>
+
+        <!-- Placeholder for dynamically generated book cards -->
+        <div id="books-display">
+            <!-- Book cards will be dynamically added here -->
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

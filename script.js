@@ -16,13 +16,14 @@ Book.prototype.toggleReadStatus = function () {
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read); // Create a new book object
     myLibrary.push(newBook); // Add the book to the library array
-    displayBooks(); // Refresh the display
+ // Refresh the display
+    displayBooks();
 }
 
 // Function to display books on the page
 function displayBooks() {
-    const libraryContainer = document.getElementById('library-container');
-    libraryContainer.innerHTML = ''; // Clear the container
+    const booksDisplay = document.getElementById('books-display'); // Use the correct container
+    booksDisplay.innerHTML = ''; // Clear the container
 
     myLibrary.forEach((book) => {
         const bookCard = document.createElement('div');
@@ -49,7 +50,7 @@ function displayBooks() {
             removeBookFromLibrary(book.id);
         });
 
-        libraryContainer.appendChild(bookCard);
+        booksDisplay.appendChild(bookCard); // Append to the correct container
     });
 }
 
